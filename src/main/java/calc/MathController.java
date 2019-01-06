@@ -21,4 +21,16 @@ public class MathController {
         int sum = Operators.substraction(operands);
         return new Answer(a, b, "substract", Integer.toString(sum));
     }
+    @RequestMapping("/multiply")
+    public Answer multiply(@RequestParam(value = "a") String a, @RequestParam(value = "b") String b) {
+        Operands operands = new Operands(Integer.parseInt(a), Integer.parseInt(b));
+        int sum = Operators.multification(operands);
+        return new Answer(a, b, "multiply", Integer.toString(sum));
+    }
+    @RequestMapping("/divide")
+    public Answer divide(@RequestParam(value = "a") String a, @RequestParam(value = "b") String b) {
+        Operands operands = new Operands(Integer.parseInt(a), Integer.parseInt(b));
+        double sum = Operators.devide(operands);
+        return new Answer(a, b, "divide", Double.toString(sum));
+    }
 }
