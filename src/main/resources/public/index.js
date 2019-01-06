@@ -3,7 +3,7 @@ function onAdd(){
 let a = document.getElementById("a").value;
 let b = document.getElementById("b").value;
 
-      let url2 = "http://localhost:8080/substract?a=" + a + "&b=" + b;
+      let url2 = "/add?a=" + a + "&b=" + b;
 
       //Fetch the content of the url using the XMLHttpRequest object
       let req2 = new XMLHttpRequest();
